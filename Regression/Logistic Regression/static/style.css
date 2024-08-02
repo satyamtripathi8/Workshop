@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #00698f;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+
+select {
+    width: 100px;
+}
+
+input[type="submit"] {
+    background-color: #00698f;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #003d5c;
+}

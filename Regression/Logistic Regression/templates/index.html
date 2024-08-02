@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Titanic Survival Predictor</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Titanic Survival Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="pclass">Passenger Class:</label>
+        <select id="pclass" name="pclass">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+        </select>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <br>
+        <label for="sibsp">Number of Siblings/Spouses:</label>
+        <input type="number" id="sibsp" name="sibsp">
+        <br>
+        <label for="parch">Number of Parents/Children:</label>
+        <input type="number" id="parch" name="parch">
+        <br>
+        <label for="fare">Fare:</label>
+        <input type="number" id="fare" name="fare">
+        <br>
+        <label for="embarked">Embarked:</label>
+        <select id="embarked" name="embarked">
+            <option value="0">S</option>
+            <option value="1">C</option>
+            <option value="2">Q</option>
+        </select>
+        <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
