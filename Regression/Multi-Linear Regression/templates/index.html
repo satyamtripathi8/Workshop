@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Sales Prediction</title>
+</head>
+<body>
+    <h1>Advertising Sales Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="TV">TV Advertising ($):</label>
+        <input type="text" id="TV" name="TV" required><br><br>
+
+        <label for="Radio">Radio Advertising ($):</label>
+        <input type="text" id="Radio" name="Radio" required><br><br>
+
+        <label for="Newspaper">Newspaper Advertising ($):</label>
+        <input type="text" id="Newspaper" name="Newspaper" required><br><br>
+
+        <button type="submit">Predict Sales</button>
+    </form>
+    {% if prediction is not none %}
+        <h2>Predicted Sales: ${{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
