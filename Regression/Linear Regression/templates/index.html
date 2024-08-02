@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Price Prediction</title>
+</head>
+<body>
+    <h1>Housing Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="area">Area (in square feet):</label>
+        <input type="text" id="area" name="area" required><br><br>
+
+        <label for="bedrooms">Number of bedrooms:</label>
+        <input type="text" id="bedrooms" name="bedrooms" required><br><br>
+
+        <label for="bathrooms">Number of bathrooms:</label>
+        <input type="text" id="bathrooms" name="bathrooms" required><br><br>
+
+        <label for="stories">Number of stories:</label>
+        <input type="text" id="stories" name="stories" required><br><br>
+
+        <label for="parking">Number of parking spaces:</label>
+        <input type="text" id="parking" name="parking" required><br><br>
+
+        <label for="mainroad">Main road (1 for Yes, 0 for No):</label>
+        <input type="text" id="mainroad" name="mainroad" required><br><br>
+
+        <label for="guestroom">Guestroom (1 for Yes, 0 for No):</label>
+        <input type="text" id="guestroom" name="guestroom" required><br><br>
+
+        <label for="basement">Basement (1 for Yes, 0 for No):</label>
+        <input type="text" id="basement" name="basement" required><br><br>
+
+        <label for="hotwaterheating">Hot water heating (1 for Yes, 0 for No):</label>
+        <input type="text" id="hotwaterheating" name="hotwaterheating" required><br><br>
+
+        <label for="airconditioning">Air conditioning (1 for Yes, 0 for No):</label>
+        <input type="text" id="airconditioning" name="airconditioning" required><br><br>
+
+        <label for="prefarea">Preferred area (1 for Yes, 0 for No):</label>
+        <input type="text" id="prefarea" name="prefarea" required><br><br>
+
+        <label for="furnishingstatus">Furnishing status (semi-furnished, unfurnished):</label>
+        <input type="text" id="furnishingstatus" name="furnishingstatus" required><br><br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+    {% if prediction is not none %}
+        <h2>Predicted Price: ${{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
